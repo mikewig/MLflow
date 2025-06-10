@@ -1,0 +1,17 @@
+services:
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.11.3
+    environment:
+      - MLFLOW_TRACKING_URI=http://0.0.0.0:5000
+      - BACKEND_STORE_URI=sqlite:///mlflow.db
+      - ARTIFACT_ROOT=/mlflow/artifacts
+    volumes:
+      - ./mlruns:/mlflow/artifacts
+      - ./mlflow.db:/mlflow.db
+    ports:
+      - "5000:5000"
+    command: >
+      mlflow server 
+      --backend-store-uri sqlite:///mlflow.db 
+      --default-artifact-root /mlflow/artifacts 
+      --host 0.0.0.0
