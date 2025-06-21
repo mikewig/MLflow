@@ -1,0 +1,38 @@
+# === MLflow ===
+mlruns/
+mlartifacts/
+*.db
+*.log
+*.bak
+
+# === Python general ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.so
+
+# === Entornos virtuales ===
+env/
+venv/
+.venv/
+
+# === Jupyter Notebooks check ===
+.ipynb_checkpoints/
+
+# === Archivos de configuración secretos ===
+.env
+*.env
+
+# === Archivos grandes / temporales ===
+.DS_Store
+*.tmp
+*.log
+# *.csv
+*.tsv
+*.parquet
+*.pkl
+*.joblib
+
+# === Modelos guardados ===
+models/
+outputs/
