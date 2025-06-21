@@ -15,7 +15,7 @@ Este proyecto permite entrenar múltiples modelos de clasificación, registrar m
 
 ## 🧰 Requisitos
 
-- Docker y Docker Compose instalados
+- Docker Desktop instalado
 - Python 3.8+
 - `make` (opcional, para comandos abreviados)
 
