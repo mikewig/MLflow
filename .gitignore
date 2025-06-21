@@ -1,6 +1,7 @@
 # === MLflow ===
 mlruns/
 mlartifacts/
+mlflow-data/
 *.db
 *.log
 *.bak

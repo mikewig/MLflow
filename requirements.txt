@@ -6,3 +6,5 @@ numpy
 seaborn
 matplotlib
 jupyter
+imblearn
+lightgbm
