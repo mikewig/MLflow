@@ -5,11 +5,11 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 
 # Carga tu dataset desde un archivo CSV
-df = pd.read_csv("ruta/a/tu/dataset.csv")  # <-- Cambia esta ruta
+df = pd.read_csv("../data/dataset.csv")  # <-- Cambia esta ruta
 
 # Divide en variables independientes (X) y dependiente (y)
-X = df.drop("objetivo", axis=1)  # "objetivo" es la columna target
-y = df["objetivo"]
+X = df.drop("stroke", axis=1)  # "objetivo" es la columna target
+y = df["stroke"]
 
 # Divide en entrenamiento y prueba
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
@@ -20,7 +20,7 @@ model.fit(X_train, y_train)
 
 # Configura MLflow
 mlflow.set_tracking_uri("http://localhost:5000")
-mlflow.set_experiment("mi-experimento")
+mlflow.set_experiment("First Experiment")
 
 # Registra el modelo
 with mlflow.start_run():
